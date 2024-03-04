@@ -1,0 +1,139 @@
+/* css rest */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body , html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    background-color: #95a5a6;
+}
+/* todo style */
+.header{
+    margin: 200px auto 0px;
+    width: min(80% , 400px);
+    text-align: center;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #2c3e50;
+}
+
+.input-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-btn{
+    cursor: pointer;
+    display: inline;
+    font-size: 1.1em;
+    background-color: #34495e;
+    color: #fff;
+    text-transform: capitalize;
+    border: 1px solid #2c3e50;
+    padding: .4em .8em;
+    transition: background .3s ;
+}
+
+.add-btn:hover{
+    background-color: #fff;
+    color: #2c3e50;
+}
+
+#input-item{
+    width: 70%;
+    font-size: 1.1em;
+    padding: .2em .4em;
+    outline: 2px solid rgb(165, 165, 165);
+    transition: background .3s ;
+}
+
+#input-item:focus{
+    background-color: #5a7086;
+    border: 1px solid #95a5a6;
+    color: #fff;
+    outline: none;
+}
+
+#input-item:focus::placeholder{
+    color: #fff;
+}
+
+.list-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.list{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: .3em .4em;
+    transform: background .2s ;
+}
+
+.list p{
+    color: #2c3e50;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-left: 30px;
+    transform: translateX(-30px);
+    transition: transform .2s;
+}
+
+.list button{
+    background: none;
+    border: none;
+}
+
+.list:hover p{
+    transform: translateX(0px);
+}
+
+.list.selected{
+    background-color: #1dd1a1 !important;
+}
+
+.list.selected p{
+    transform: translateX(0px);
+}
+
+.list p::before{
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 3px;
+    left: 12px;
+    transform: rotate(45deg);
+    height: 7px;
+    width: 3px;
+}
+
+.list:nth-child(odd){
+    background-color: #8698a8;
+}
+
+
+img{
+    width: 20px;
+}
